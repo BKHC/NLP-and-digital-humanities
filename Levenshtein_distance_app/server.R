@@ -7,10 +7,42 @@
 #    http://shiny.rstudio.com/
 #
 
+load("translation.bin") # contains the dictionary, parsed as a double list
+
 library(shiny)
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
+  tr <- function(text){ # translates text into current language
+    sapply(text,function(s) translation[[s]][[input$language]], USE.NAMES=FALSE)
+  }
   # display the original text inputted by the user 
+  output$uiWord1 <- renderUI({
+    textInput(inputId   = "word1",
+                label     = tr("Please enter first word:"),
+              value = "apricot")
+  })
+  output$uiWord2 <- renderUI({
+    textInput(inputId   = "word2",
+              label     = tr("Please enter second word:"),
+              value = "alphabet")
+  })
+  
+  output$inputlabel <- renderText({ 
+    paste(tr("You have entered the following words:"))
+  }) 
+  
+  output$transformationlabel <- renderText({ 
+    paste(tr("Transformation:"))
+  }) 
+  
+  output$matrixlabel <- renderText({ 
+    paste(tr("Matrix:"))
+  }) 
+  
+  output$resultlabel <- renderText({ 
+    paste(tr("The Results:"))
+  }) 
+  
   output$word1 <- renderText({ 
     return(input$word1)
   }) 
@@ -96,6 +128,7 @@ shinyServer(function(input, output) {
     # This is what will be done when reaching the first column (but without being in the top cell, since this has been covered in the first test)
     if (j == 1) { # Here, we can only move to the above cell, since there are no more cells on the left
       path <- path("down", path)
+      #path <- path("down", path)
       transformation_path(i-1, j, m, path)
       return (1);
     } 

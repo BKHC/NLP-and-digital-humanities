@@ -1,0 +1,12 @@
+name: lotka-volterra
+title: lotka-volterra
+username:
+account: bkhchoi
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2977832
+bundleId: 3719925
+url: https://bkhchoi.shinyapps.io/lotka-volterra/
+when: 1602228449.13406
+asMultiple: FALSE
+asStatic: FALSE

@@ -1,0 +1,12 @@
+name: Levenshtein_distance_app
+title: Levenshtein_distance_app
+username:
+account: bkhchoi
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2855743
+bundleId: 3718329
+url: https://bkhchoi.shinyapps.io/Levenshtein_distance_app/
+when: 1602186135.68076
+asMultiple: FALSE
+asStatic: FALSE
