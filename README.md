@@ -6,3 +6,5 @@ https://tun-yu-tang.shinyapps.io/morphosyntax_analysis_app/
 
 Levenshtein Distance: 
 https://bkhchoi.shinyapps.io/Levenshtein_distance_app/
+
+https://bkhchoi.shinyapps.io/lotka-volterra/
