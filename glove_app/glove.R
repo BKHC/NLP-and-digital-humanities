@@ -11,7 +11,7 @@ colnames(vectors) = c('word',paste('dim',1:300,sep = '_'))
 
 as_tibble(vectors)
 
-berlin <- as.numeric(vectors[vectors[, "word"] == "paris",])[-1] + as.numeric(vectors[vectors[, "word"] == "france",])[-1] + as.numeric(vectors[vectors[, "word"] == "germany",])[-1]
+berlin <- as.numeric(vectors[vectors[, "word"] == "paris",])[-1] - as.numeric(vectors[vectors[, "word"] == "france",])[-1] + as.numeric(vectors[vectors[, "word"] == "germany",])[-1]
 
 targets = list("berlin", "paris", "munich", "leipzig", "germany")
 

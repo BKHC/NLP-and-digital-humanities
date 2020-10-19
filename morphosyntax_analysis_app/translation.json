@@ -1,0 +1,34 @@
+{
+    "languages": ["en", "fr", "cn"],
+    "translation": [
+        {"en": "*** Morphosyntax Analysis ***", "fr": "*** Morphosyntax Analysis ***", "cn": "*** 形态语法分析 ***"},
+        {"en": "Please enter your statement:", "fr": "Veuillez saisir votre relevé:", "cn": "请输入您的语句:"},
+        {"en": "Change language", "fr": "Changer de langue", "cn": "改变语言"},
+        {"en": "english-ewt-ud-2.4-190531.udpipe", "fr": "french-gsd-ud-2.4-190531.udpipe", "cn": "chinese-gsd-ud-2.4-190531.udpipe"},
+        {
+            "en": "The Shiny App will perform Morphosyntax Analysis on the entered statement and show you the results.",
+            "fr": "L'application Shiny effectuera une analyse Morphosyntax sur l'instruction saisie et vous montrera les résultats.",
+            "cn": "Shiny App将对输入的语句执行形态语法分析，并向您显示结果。"
+        },
+        {
+            "en": "After you enter your statement, please press 'Start the Morphosyntax Analysis Process' below:",
+            "fr": "Après avoir saisi votre relevé, veuillez cliquer sur `` Démarrer le processus d'analyse de la morphosyntaxe '' ci-dessous:",
+            "cn": "输入您的句子后，请按以下“开始形态语法分析过程”："
+        },
+        {
+            "en": "Start the Morphosyntax Analysis Process",
+            "fr": "Démarrez le processus d'analyse morphosyntaxe",
+            "cn": "开始形态语法分析过程"
+        },
+        {
+            "en": "You have entered the following statement:",
+            "fr": "Vous avez saisi la déclaration suivante:",
+            "cn": "您输入了以下语句："
+        },
+        {
+            "en": "The output of Morphosyntax Analysis:",
+            "fr": "Le résultat de l'analyse morphosyntaxe:",
+            "cn": "形态语法分析的输出："
+        }
+      ]
+  }

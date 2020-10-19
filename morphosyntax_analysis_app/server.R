@@ -1,26 +1,38 @@
 options(shiny.maxRequestSize=30*1024^2) 
 
+# to do - try to find udpipe model for simplified chinese
+
 # Import libraries that are needed for processing in this module.
-library(shiny) 
+library(shiny)
 library(data.table) 
 library(udpipe)
 
 # The first time, you have to download a language model to perform morpho-syntactic analysis
-udpipe_download_model(language = "english")
+#udpipe_download_model(language = "english")
+#udpipe_download_model(language = "chinese")
+#udpipe_download_model(language = "french")
 
-# After that, you can simply load the language model stored on your computer and ignore the previous command line
-my_language_model <- udpipe_load_model("english-ewt-ud-2.4-190531.udpipe")
+modelList <- list("en" = "english-ewt-ud-2.4-190531.udpipe", "fr" = "french-gsd-ud-2.4-190531.udpipe", "cn" = "chinese-gsd-ud-2.4-190531.udpipe")
 
 # Define server logic required to summarize and view the result of analysis 
-shinyServer(function(input, output) {     
+shinyServer(function(input, output, session) {     
+
+  observeEvent(input$selected_language, {
+    update_lang(session, input$selected_language)
+  })
+
   # display the original text inputted by the user 
   output$Original <- renderText({ 
-    OriginalTextInput <- input$obs 
+    OriginalTextInput <- input$obs
     return(OriginalTextInput) 
   }) 
 
   # Display the top predictive observations 
   output$view <- renderTable({ 
+
+  # change model accroding to selected_language
+  my_language_model <- udpipe_load_model(modelList[[input$selected_language]])
+  
   OriginalTextInput <- input$obs 
   my_output <- udpipe_annotate(my_language_model, x= OriginalTextInput, keep_acronyms=TRUE)
 
