@@ -2,7 +2,7 @@
 
 ## Developing software for teaching natural language processing and digital humanities
 
-Under the supervision of Dr Christophe Coupe, The Unviersity of Hong Kong
+Under the supervision of Dr. Christophe Coupe, The Unviersity of Hong Kong
 
 Online Versions
 
