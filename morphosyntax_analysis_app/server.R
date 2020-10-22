@@ -8,9 +8,9 @@ library(data.table)
 library(udpipe)
 
 # The first time, you have to download a language model to perform morpho-syntactic analysis
-#udpipe_download_model(language = "english")
-#udpipe_download_model(language = "chinese")
-#udpipe_download_model(language = "french")
+udpipe_download_model(language = "english")
+udpipe_download_model(language = "chinese")
+udpipe_download_model(language = "french")
 
 modelList <- list("en" = "english-ewt-ud-2.4-190531.udpipe", "fr" = "french-gsd-ud-2.4-190531.udpipe", "cn" = "chinese-gsd-ud-2.4-190531.udpipe")
 

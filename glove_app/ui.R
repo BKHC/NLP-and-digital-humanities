@@ -4,21 +4,24 @@ library(shiny)
 shinyUI(fluidPage( 
 
     # Application title. 
-    titlePanel("*** Morphosyntax Analysis ***"), 
+    titlePanel("*** Word Embedding - Glove ***"), 
     
     mainPanel( 
         
-        textInput("obs", "Please enter your statement:"),  
-        helpText("The Shiny App will perform Morphosyntax Analysis on the entered statement and show you the results.", style = "color:blue"),
-        helpText("After you enter your statement, please press 'Start the Morphosyntax Analysis Process' below:", style = "color:blue"),
-        submitButton("Start the Morphosyntax Analysis Process"),
-            
-        h5("You have entered the following statement:", style = "color:blue"),
+        textInput("word1", "Enter your first word:"),  
+        helpText("minus", style = "color:blue"),
+
+        textInput("word2", "Enter your second word:"),  
+        helpText("plus", style = "color:blue"),
+        
+        textInput("word3", "Enter your third word:"),  
+
+        h5("You have entered the following formula:", style = "color:blue"),
         br(), 
         textOutput("Original"), 
         br(), 
-        h3("The output of Morphosyntax Analysis:", style = "color:green"), 
-        tableOutput("view") 
+        h3("The top10 similar vectors after calculating the cosine similarity :", style = "color:green"), 
+        tableOutput("cos_sim_sort") 
     ) 
 ) 
 ) 
