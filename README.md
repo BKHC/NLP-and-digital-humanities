@@ -12,3 +12,6 @@ https://bkhchoi.shinyapps.io/Levenshtein_distance_app/
 
 Lotka-volterra:
 https://bkhchoi.shinyapps.io/lotka-volterra/
+
+Language Competition
+https://tun-yu-tang.shinyapps.io/language_competition_app/

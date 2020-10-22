@@ -1,0 +1,36 @@
+{
+    "languages": ["en", "fr", "cn"],
+    "translation": [
+        {"en": "Competition of two linguistic variants on social networks", "fr": "Concurrence de deux variantes linguistiques sur les réseaux sociaux", "cn": "社交网络上两种语言变体的竞争"},
+        {"en": "Evolution of the linguistic system", "fr": "Évolution du système linguistique", "cn": "语言系统的演变"},
+        {"en": "Change language", "fr": "Changer de langue", "cn": "改变语言"},
+        {"en": "Network", "fr": "Réseau", "cn": "网络"},
+        {
+            "en": "Number of runs (how many simulations with the same values of the parameters) ",
+            "fr": "Nombre d'exécutions (combien de simulations avec les mêmes valeurs des paramètres)",
+            "cn": "运行次数（具有相同参数值的模拟次数）"
+        },
+        {
+            "en": "Run to visualize (if more than actual number of runs, show you the last run)",
+            "fr": "Exécuter pour visualiser (si plus que le nombre réel d'exécutions, vous montrer la dernière exécution)",
+            "cn": "运行以可视化（如果超过实际运行次数，请显示最后一次运行）"
+        },
+        {"en": "Parameters", "fr": "Paramètres", "cn": "参量"},
+        {"en": "Simulation", "fr": "Simulation", "cn": "模拟"},
+        {"en": "Time limit", "fr": "Limite de temps", "cn": "时限"},
+        {"en": "Type of network", "fr": "Type de réseau", "cn": "网络类型"},
+        {"en": "random", "fr": "Aléatoire", "cn": "随机"},
+        {"en": "small-world", "fr": "petit monde", "cn": "小型"},
+        {"en": "scale-free", "fr": "sans échelle", "cn": "无标度"},
+        {"en": "Number of nodes", "fr": "Paramètres", "cn": "节点数"},
+        {"en": "Linguistic model", "fr": "Modèle linguistique", "cn": "语言模型"},
+        {"en": "Functional bias in favor of variant B", "fr": "Biais fonctionnel en faveur de la variante B", "cn": "功能偏向于变体B"},
+        {"en": "a (exponent in the formula to compute impact)", "fr": "a (exposant dans la formule pour calculer l'impact)", "cn": "a（公式中用于计算影响力的指数）"},
+        {"en": "Probability of imperfect learning", "fr": "Probabilité d'apprentissage imparfait", "cn": "学习不完善的可能性"},
+        {"en": "Modify status at birth", "fr": "Modifier le statut à la naissance", "cn": "修改出生时的状态"},
+        {"en": "Visualization of the network", "fr": "Visualisation du réseau", "cn": "网络可视化"},
+        {"en": "Time step to visualize", "fr": "Pas de temps pour visualiser", "cn": "可视化的时间步"},
+        {"en": "Run simulation", "fr": "Lancer la simulation", "cn": "运行模拟"},
+        {"en": "Compute!", "fr": "Calculer!", "cn": "参量"}
+      ]
+  }
