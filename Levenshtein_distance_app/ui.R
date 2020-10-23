@@ -10,9 +10,11 @@ library(shiny)
 
 # Define UI for application that draws a histogram
 shinyUI(fluidPage(
-  radioButtons(inputId = "language", label = "",
+  div( style = "float: right;",
+  selectInput(inputId = "language", label = "",
                choices = c("English" = "en", "Français" = "fr", "中文" = "ch"),
-               selected = "en"),
+               selected = "en")
+  ),
   # Application title
   # Application title. 
   

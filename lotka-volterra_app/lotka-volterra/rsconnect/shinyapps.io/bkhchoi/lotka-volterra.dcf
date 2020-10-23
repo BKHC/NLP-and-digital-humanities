@@ -5,8 +5,8 @@ account: bkhchoi
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 2977832
-bundleId: 3719925
+bundleId: 3773375
 url: https://bkhchoi.shinyapps.io/lotka-volterra/
-when: 1602228449.13406
+when: 1603436123.73564
 asMultiple: FALSE
 asStatic: FALSE

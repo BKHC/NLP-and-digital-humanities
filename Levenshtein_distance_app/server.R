@@ -26,7 +26,7 @@ shinyServer(function(input, output) {
               label     = tr("Please enter second word:"),
               value = "alphabet")
   })
-  
+
   output$inputlabel <- renderText({ 
     paste(tr("You have entered the following words:"))
   }) 
@@ -139,19 +139,28 @@ shinyServer(function(input, output) {
     if (m[i-1, j-1] == min_value) {
       path <- c("diag", path)
       transformation_path(i-1, j-1, m, path)
-      path <- path[2:length(path)]
+      if (length(path)>=2)
+        path <- path[2:length(path)]
+      else 
+        path <- c()
     }
     
     if (m[i-1, j] == min_value) {
       path <- c("down", path)
       transformation_path(i-1, j, m, path)
-      path <- path[2:length(path)]
+      if (length(path)>=2)
+        path <- path[2:length(path)]
+      else 
+        path <- c()
     }
     
     if (m[i, j-1] == min_value) {
       path <- c("right", path)
       transformation_path(i, j-1, m, path)
-      path <- path[2:length(path)]
+      if (length(path)>=2)
+        path <- path[2:length(path)]
+      else 
+        path <- c()
     }
   }
   

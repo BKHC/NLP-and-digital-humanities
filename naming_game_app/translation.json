@@ -1,0 +1,69 @@
+{
+    "languages": ["en", "fr", "cn"],
+    "translation": [
+        {"en": "*** Naming Games ***", "fr": "*** Jeux de dénomination ***", "cn": "*** 命名游戏 ***"},
+        {"en": "Parameters of the simulation", "fr": "Paramètres de la simulation", "cn": "模拟参数"},
+        {"en": "Number of time steps", "fr": "Nombre de pas de temps", "cn": "时间步数"},
+        {"en": "Parameters of the linguistic model", "fr": "Paramètres du modèle linguistique", "cn": "语言模型的参数"},
+        {
+            "en": "Number of agents",
+            "fr": "Nombre d'agents",
+            "cn": "代理人数"
+        },
+        {
+            "en": "Number of concepts",
+            "fr": "Nombre de concepts",
+            "cn": "概念数"
+        },
+        {
+            "en": "Probability to create a new word",
+            "fr": "Probabilité de créer un nouveau mot",
+            "cn": "创造新词的可能性"
+        },
+        {
+            "en": "Probability to learn a new word",
+            "fr": "Probabilité d'apprendre un nouveau mot",
+            "cn": "学习一个新单词的可能性"
+        },
+        {
+            "en": "Run simulation",
+            "fr": "Lancer la simulation",
+            "cn": "运行模拟"
+        },
+        {
+            "en": "Compute!",
+            "fr": "Calculer!",
+            "cn": "计算!"
+        },
+        {
+            "en": "Evolution of the success rate",
+            "fr": "Evolution du taux de réussite",
+            "cn": "成功率的演变"
+        },
+        {
+            "en": "Evolution of success",
+            "fr": "Évolution du succès",
+            "cn": "成功的演变"
+        },
+        {
+            "en": "Success",
+            "fr": "Succès",
+            "cn": "成功"
+        },
+        {
+            "en": "Time",
+            "fr": "Temps",
+            "cn": "时间"
+        },
+        {
+            "en": "Evolution of the scores of the best words",
+            "fr": "Evolution des scores des meilleurs mots",
+            "cn": "最佳单词分数的演变"
+        },
+        {
+            "en": "Average score of the best words across concepts",
+            "fr": "Score moyen des meilleurs mots dans les concepts",
+            "cn": "评分"
+        }
+      ]
+  }

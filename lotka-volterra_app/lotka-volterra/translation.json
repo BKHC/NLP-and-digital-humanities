@@ -1,0 +1,38 @@
+{
+    "languages": ["en", "fr", "cn"],
+    "translation": [
+        {"en": "*** Lotka Volterra Predator-Prey relations ***", "fr": "*** Modélisation des relations Prédateur-Proie Lotka Volterra ***", "cn": "*** 洛特卡－沃爾泰拉方程 (掠食者—獵物方程)*** "},
+        {"en": "Set parameters for the L-V predator-prey model", "fr": "Définir les paramètres du modèle prédateur-proie", "cn": "设置捕食者-猎物模型的参数"},
+        {"en": "Change language", "fr": "Changer de langue", "cn": "改变语言"},
+        {"en": "Set starting population sizes", "fr": "Définir les tailles de population de départ", "cn": "设置起始人口数量"},
+        {
+            "en": "Select a value for N (starting population of prey)",
+            "fr": "Sélectionnez une valeur pour N (population de départ de proies)",
+            "cn": "为N选择一个值（起始獵物数量）"
+        },
+        {
+            "en": "Select a value for P (starting population of predator)",
+            "fr": "Sélectionnez une valeur pour P (population de départ du prédateur)",
+            "cn": "为P选择一个值（起始捕食者数量）"
+        },
+        {"en": "Prey carrying capacity", "fr": "Définir la capacité de charge des proies", "cn": "设置猎物的承载能力"},
+        {"en": "No prey carrying capacity", "fr": "Aucune capacité de charge des proies", "cn": "没有"},
+        {"en": "Select a value for K (prey's carrying capacity).", "fr": "Sélectionnez une valeur pour K (capacité de charge de la proie).", "cn": "选择K的值（猎物的承载能力）"},
+        {"en": "Set demographic parameters", "fr": "Définir les paramètres démographiques", "cn": "设置人口统计参数"},
+        {"en": "Choose a value for r (prey intrinsic growth rate)", "fr": "Choisissez une valeur pour r (taux de croissance intrinsèque des proies)", "cn": "选择r的值（猎物固有增长率）"},
+        {"en": "Choose a value for a (predation efficiency)", "fr": "Choisissez une valeur pour a (efficacité de la prédation)", "cn": "选择r的值（捕食效率）"},
+        {"en": "Choose a value for d (predator death rate)", "fr": "Choisissez une valeur pour d (taux de mortalité des prédateurs)", "cn": "选择d的值（捕食者死亡率）"},
+        {"en": "Choose a value for b (conversion efficiency)", "fr": "Choisissez une valeur pour b (efficacité de conversion)", "cn": "为b选择一个值（转换效率）"},
+        {"en": "Number of time steps to run the model", "fr": "Nombre de pas de temps pour exécuter le modèle", "cn": "运行模型的步数"},
+        {"en": "Go!", "fr":"Début!", "cn":"开始!"},
+        {"en": "Predator population size", "fr": "Taille de la population de prédateurs", "cn": "捕食者数量"},
+        {"en": "Prey population size", "fr":"Taille de la population de proies", "cn":"猎物种群数量"},
+        {"en": "Brush an area over me to change axes of bottom graph", "fr":"Passez une zone sur moi pour changer les axes du graphique du bas", "cn":"在我上方刷一个区域以更改底部图形的轴"},
+        {"en": "Population Size", "fr":"Taille de la population", "cn":"人口"},
+        {"en": "Time", "fr":"Temps", "cn":"时间"},
+        {"en": "Prey", "fr":"Proie", "cn":"猎物"},
+        {"en": "Predator", "fr":"Prédateur/prédatrice", "cn":"捕食者"},
+        {"en": "Here are plots showing changes in populations", "fr":"Ici montrant les changements de population", "cn":"这里是显示人口变化"},
+        {"en": "Plots", "fr":"Figure", "cn":"图"}
+      ]
+  }

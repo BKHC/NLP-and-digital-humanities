@@ -1,0 +1,12 @@
+name: naming_game_app
+title: naming_game_app
+username:
+account: bkhchoi
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3079930
+bundleId: 3773514
+url: https://bkhchoi.shinyapps.io/naming_game_app/
+when: 1603439019.07296
+asMultiple: FALSE
+asStatic: FALSE
