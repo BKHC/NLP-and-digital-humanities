@@ -5,6 +5,6 @@ account: tun-yu-tang
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 3072705
-bundleId: 3770503
+bundleId: 3773286
 url: https://tun-yu-tang.shinyapps.io/language_competition_app/
-when: 1603370406.63151
+when: 1603434008.48314

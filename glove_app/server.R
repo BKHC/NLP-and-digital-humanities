@@ -34,7 +34,7 @@ shinyServer(function(input, output, session) {
     print("Computing!")
  
     withProgress(message = 'Computing...', value = 0, {
-      target <- as.numeric(vectors[vectors[, "word"] == input$word1,])[-1]- as.numeric(vectors[vectors[, "word"] == input$word2,])[-1] + as.numeric(vectors[vectors[, "word"] == input$word3,])[-1]
+      target <- as.numeric(vectors[vectors[, "word"] == tolower(input$word1),])[-1]- as.numeric(vectors[vectors[, "word"] == tolower(input$word2),])[-1] + as.numeric(vectors[vectors[, "word"] == tolower(input$word3),])[-1]
 
       cos_sim = sim2(x = as.matrix(subset(vectors, select = -c(word))), y = t(as.matrix(target)), method = "cosine", norm = "l2")
 
