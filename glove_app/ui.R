@@ -20,6 +20,11 @@ shinyUI(fluidPage(
         br(), 
         textOutput("Original"), 
         br(), 
+
+        h4("Run computation"),
+        actionButton("goButton", "Compute!"),
+
+        br(), 
         h3("The top10 similar vectors after calculating the cosine similarity :", style = "color:green"), 
         tableOutput("cos_sim_sort") 
     ) 

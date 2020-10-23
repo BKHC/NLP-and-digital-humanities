@@ -9,11 +9,9 @@ library(ggplot2)
 library(tidyverse)
 library(ggraph)
 
-
 rm(list = ls()) # Emptying the memory
 
 extrafont::loadfonts() # Load some extra fonts
-
 
 # Function to choose the colors when displaying the graphs
 custom_colors <- function(universe, ...){
