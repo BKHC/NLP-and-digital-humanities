@@ -5,19 +5,6 @@ library(shiny.i18n)
 i18n <- Translator$new(translation_json_path = "translation.json")
 i18n$set_translation_language("en")
 
-# A function to darken a set of colors
-darken <- function(color, factor=1.4){
-  col <- col2rgb(color)
-  col <- col/factor
-  col <- rgb(t(col), maxColorValue=255)
-  return (col)
-}
-
-# Define the colors
-my_colors <- rev(heat.colors(5, alpha=1))
-my_colors <- darken(my_colors)
-names(my_colors) <- as.character(1:5)
-
 # Define the interface with the various parameters and the displays
 ui <- fluidPage(
 

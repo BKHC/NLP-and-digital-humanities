@@ -13,6 +13,19 @@ rm(list = ls()) # Emptying the memory
 
 extrafont::loadfonts() # Load some extra fonts
 
+# A function to darken a set of colors
+darken <- function(color, factor=1.4){
+  col <- col2rgb(color)
+  col <- col/factor
+  col <- rgb(t(col), maxColorValue=255)
+  return (col)
+}
+
+# Define the colors
+my_colors <- rev(heat.colors(5, alpha=1))
+my_colors <- darken(my_colors)
+names(my_colors) <- as.character(1:5)
+
 # Function to choose the colors when displaying the graphs
 custom_colors <- function(universe, ...){
   col.names <- c(...)
