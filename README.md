@@ -20,3 +20,6 @@ https://bkhchoi.shinyapps.io/lotka-volterra/
 
 Language Competition:
 https://tun-yu-tang.shinyapps.io/language_competition_app/
+
+Naming Game: 
+https://bkhchoi.shinyapps.io/naming_game_app/
