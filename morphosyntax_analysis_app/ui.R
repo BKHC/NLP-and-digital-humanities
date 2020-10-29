@@ -24,13 +24,17 @@ shinyUI(fluidPage(
         textInput("obs", i18n$t("Please enter your statement:")),  
         helpText(i18n$t("The Shiny App will perform Morphosyntax Analysis on the entered statement and show you the results."), style = "color:blue"),
         helpText(i18n$t("After you enter your statement, please press 'Start the Morphosyntax Analysis Process' below:"), style = "color:blue"),
-            
+        
+        br(),
+        actionButton("goButton", i18n$t("Start the Morphosyntax Analysis Process")),
+        br(),
+
         h5(i18n$t("You have entered the following statement:"), style = "color:blue"),
         br(), 
         textOutput("Original"), 
         br(), 
         h3(i18n$t("The output of Morphosyntax Analysis:"), style = "color:green"), 
-        tableOutput("view") 
+        tableOutput("analysis_result") 
     ) 
 ) 
 ) 

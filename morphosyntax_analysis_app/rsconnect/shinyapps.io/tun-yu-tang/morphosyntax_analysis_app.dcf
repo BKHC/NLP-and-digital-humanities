@@ -5,6 +5,6 @@ account: tun-yu-tang
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 2851797
-bundleId: 3769926
+bundleId: 3797215
 url: https://tun-yu-tang.shinyapps.io/morphosyntax_analysis_app/
-when: 1603357706.46363
+when: 1603986358.20211
