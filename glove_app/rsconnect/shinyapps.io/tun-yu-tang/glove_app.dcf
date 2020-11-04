@@ -5,6 +5,6 @@ account: tun-yu-tang
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 3071945
-bundleId: 3773316
+bundleId: 3819801
 url: https://tun-yu-tang.shinyapps.io/glove_app/
-when: 1603434610.34032
+when: 1604502152.83442
