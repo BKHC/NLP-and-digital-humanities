@@ -3,7 +3,8 @@
     "translation": [
         {"en": "*** Morphosyntax Analysis ***", "fr": "*** Morphosyntax Analysis ***", "zh-trad": "*** 形態語法分析 ***", "zh-sim": "*** 形态语法分析 ***"},
         {"en": "Please enter your statement:", "fr": "Veuillez saisir votre relevé:", "zh-trad": "請輸入您的語句:" , "zh-sim": "请输入您的语句:"},
-        {"en": "Change language", "fr": "Changer de langue", "zh-trad": "改變語言" , "zh-sim": "改变语言"},
+        {"en": "Change interface language", "fr": "Changer la langue de l'interface", "zh-trad": "改變界面語言" , "zh-sim": "更改界面语言"},
+        {"en": "Change model language", "fr": "Changer la langue du modèle", "zh-trad": "改變模型語言" , "zh-sim": "更改模型语言"},
         {"en": "english-ewt-ud-2.4-190531.udpipe", "fr": "french-gsd-ud-2.4-190531.udpipe", "zh-trad": "chinese-gsd-ud-2.4-190531.udpipe", "zh-sim": "chinese-gsd-ud-2.4-190531.udpipe"},
         {
             "en": "The Shiny App will perform Morphosyntax Analysis on the entered statement and show you the results.",

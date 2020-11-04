@@ -12,7 +12,6 @@ if (!file.exists('glove.6B.50d.txt')) {
   unzip('archive.zip')
 }
 
-
 # After that, we can simply load the glove vectors stored locally
 vectors = data.table::fread('glove.6B.50d.txt', data.table = F,  encoding = 'UTF-8')
 

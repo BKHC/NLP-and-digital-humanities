@@ -11,8 +11,15 @@ shinyUI(fluidPage(
     # language selection
     shiny.i18n::usei18n(i18n),
     div( style = "float: right;",
-        selectInput('selected_language',
-                    i18n$t("Change language"),
+        selectInput('selected_interface_language',
+                    i18n$t("Change interface language"),
+                    choices = i18n$get_languages(),
+                    selected = i18n$get_key_translation())
+    ),
+
+    div( style = "float: right;",
+        selectInput('selected_model_language',
+                    i18n$t("Change model language"),
                     choices = i18n$get_languages(),
                     selected = i18n$get_key_translation())
     ),
