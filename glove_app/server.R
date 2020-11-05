@@ -45,6 +45,9 @@ shinyServer(function(input, output, session) {
       colnames(output_data) <- c("words", "cosine similarity")
     })
     
+    rm("target", "cos_sim")
+    gc()
+
     return (output_data)
   })
 
