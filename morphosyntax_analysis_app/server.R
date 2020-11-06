@@ -1,6 +1,9 @@
 options(shiny.maxRequestSize=30*1024^2) 
 
 # Import libraries that are needed for processing in this module.
+library(ggraph)
+library(ggplot2)
+library(igraph)
 library(shiny)
 library(data.table) 
 library(udpipe)
