@@ -39,9 +39,14 @@ shinyUI(fluidPage(
         h5(i18n$t("You have entered the following statement:"), style = "color:blue"),
         br(), 
         textOutput("Original"), 
+
         br(), 
         h3(i18n$t("The output of Morphosyntax Analysis:"), style = "color:green"), 
-        tableOutput("analysis_result") 
+        tableOutput("analysis_result"),
+
+        br(), 
+        h3(i18n$t("")), plotOutput("plot_result",   width = "150%", height = "600px")
+
     ) 
 ) 
 ) 

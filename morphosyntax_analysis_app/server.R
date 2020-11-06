@@ -5,7 +5,7 @@ library(shiny)
 library(data.table) 
 library(udpipe)
 library(cld3)
-
+library(textplot) # to plot the dependencies
 
 # The first time, you have to download a language model to perform morpho-syntactic analysis
 if (!file.exists('chinese-gsdsimp-ud-2.5-191206.udpipe')) {
@@ -16,7 +16,7 @@ if (!file.exists('chinese-gsdsimp-ud-2.5-191206.udpipe')) {
 }
 
 
-modelList <- list("en" = "english-ewt-ud-2.4-190531.udpipe", "fr" = "french-gsd-ud-2.4-190531.udpipe", "zh-trad" = "chinese-gsd-ud-2.4-190531.udpipe", "zh-sim" = "chinese-gsdsimp-ud-2.5-191206.udpipe")
+modelList <- list("en" = "english-ewt-ud-2.5-191206.udpipe", "fr" = "french-gsd-ud-2.5-191206.udpipe", "zh-trad" = "chinese-gsd-ud-2.5-191206.udpipe", "zh-sim" = "chinese-gsdsimp-ud-2.5-191206.udpipe")
 
 # Define server logic required to summarize and view the result of analysis 
 shinyServer(function(input, output, session) {     
@@ -31,28 +31,43 @@ shinyServer(function(input, output, session) {
     return(OriginalTextInput) 
   }) 
 
-  results <- eventReactive(input$goButton,{
+  model <- eventReactive(input$goButton,{
     print("Computing!")
  
     withProgress(message = 'Computing...', value = 0, {
       my_language_model <- udpipe_load_model(modelList[[input$selected_model_language]])
       
-      OriginalTextInput <- input$obs 
-      my_output <- udpipe_annotate(my_language_model, x= input$obs, keep_acronyms=TRUE)
-
-      # Let's transform the output, so it is easier to inspect...
-      my_output <- as.data.frame(my_output)
-
-      # Dropping some columns to see things more easily
-      my_simplified_output <- subset(my_output, select = -c(doc_id, paragraph_id, sentence, deps, misc))
     })
-    return (my_simplified_output)
+    return (my_language_model)
   })
 
   output$analysis_result <- renderTable({ 
-    if (is.null(results()))
+    if (is.null(model()))
       return (NULL)
-  # Displaying the result
-  return(results())    
+
+    OriginalTextInput <- input$obs 
+    my_output <- udpipe_annotate(model(), x= input$obs, keep_acronyms=TRUE)
+
+    # Let's transform the output, so it is easier to inspect...
+    my_output <- as.data.frame(my_output)
+
+    # Dropping some columns to see things more easily
+    table_output <- subset(my_output, select = -c(doc_id, paragraph_id, sentence, deps, misc))
+
+  return(table_output)    
   }) 
+
+  output$plot_result <- renderPlot({ 
+    if (is.null(model()))
+      return (NULL)
+
+    OriginalTextInput <- input$obs 
+    my_output <- udpipe_annotate(model(), x= input$obs, keep_acronyms=TRUE)
+
+    # Let's transform the output, so it is easier to inspect...
+    my_output <- as.data.frame(my_output)
+
+  return(textplot_dependencyparser(my_output))    
+  }) 
+
 }) 
