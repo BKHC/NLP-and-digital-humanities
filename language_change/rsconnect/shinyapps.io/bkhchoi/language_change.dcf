@@ -1,0 +1,12 @@
+name: language_change
+title: language_change
+username:
+account: bkhchoi
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3267546
+bundleId: 3881601
+url: https://bkhchoi.shinyapps.io/language_change/
+when: 1605812249.61727
+asMultiple: FALSE
+asStatic: FALSE
