@@ -3,8 +3,6 @@ options(shiny.maxRequestSize=30*1024^2)
 # Import libraries that are needed for processing in this module.
 library(shiny)
 library(dplyr)
-library(data.table)
-library(R.utils)
 library(Rtsne)
 library(plotly)
 
@@ -87,6 +85,7 @@ shinyServer(function(input, output, session) {
 # display the original text inputted by the user 
 
   results <- eventReactive(input$goButton,{
+    
     print("Computing!")
  
     withProgress(message = 'Computing...', value = 0, {
