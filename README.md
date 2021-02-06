@@ -12,6 +12,9 @@ https://tun-yu-tang.shinyapps.io/morphosyntax_analysis_app/
 Word Embedding - Glove:
 https://tun-yu-tang.shinyapps.io/glove_app/
 
+Word Embedding Ploting - Glove:
+https://tun-yu-tang.shinyapps.io/glove_plot_app/
+
 Levenshtein Distance: 
 https://bkhchoi.shinyapps.io/Levenshtein_distance_app/
 
