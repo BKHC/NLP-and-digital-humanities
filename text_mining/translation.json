@@ -1,0 +1,28 @@
+{
+    "languages": ["en", "fr", "cn"],
+    "translation": [
+        {"en": "Models of Language Change", "fr": "Modèles de changement de langue", "cn": "語言變化的模型"},
+        {"en": "Change language", "fr": "Changer de langue", "cn": "改变语言"},
+        {
+            "en": "Number of runs",
+            "fr": "Nombre d'exécutions",
+            "cn": "运行次数"
+        },
+        {"en": "Regular Network", "fr": "Réseau régulier", "cn": "随机"},
+        {"en": "Random Network", "fr": "Aléatoire", "cn": "随机"},
+        {"en": "Small-world", "fr": "Petit monde", "cn": "小型"},
+        {"en": "Scale-free", "fr": "Sans échelle", "cn": "无标度"},
+        {"en": "Parameters", "fr": "Paramètres", "cn": "参量"},
+        {"en": "Result", "fr": "Résultat", "cn": "结果"},
+        {"en": "Network Statistics", "fr": "Statistiques du réseau", "cn": "网络统计"},
+        {"en": "Rewiring Probability (for Small-world)", "fr": "Probabilité de recâblage (pour Small-world)", "cn": "重新布线概率（适用于小世界）"},
+        {"en": "Ratio of Learner", "fr": "Ratio de l'apprenant", "cn": "学习者比例"},
+        {"en": "Number of nodes", "fr": "Paramètres", "cn": "节点数"},
+        {"en": "Mean degree in the network", "fr": "Degré de réseau moyen", "cn": "平均网络度"},
+        {"en": "Number of adult innovator", "fr": "Nombre d'innovateurs adultes", "cn": "创新成人人数"},
+        {"en": "Functional bias", "fr": "Biais fonctionnel", "cn": "功能偏向"},
+        {"en": "Run simulation", "fr": "Lancer la simulation", "cn": "运行模拟"},
+        {"en": "simulation", "fr": "simulation", "cn": "模拟"},
+        {"en": "Compute!", "fr": "Calculer!", "cn": "参量"}
+      ]
+  }
