@@ -26,3 +26,6 @@ https://tun-yu-tang.shinyapps.io/language_competition_app/
 
 Naming Game: 
 https://bkhchoi.shinyapps.io/naming_game_app/
+
+Text Mining: 
+https://bkhchoi.shinyapps.io/text_mining/
