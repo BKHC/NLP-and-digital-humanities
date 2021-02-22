@@ -165,15 +165,36 @@ ui <- fluidPage(
           )
         ),
         tabPanel(title = i18n$t("Regular Network"),
-                 fluidRow(plotOutput("regular_graph"))),
+                 h4(i18n$t("Initial Graph")),
+                 fluidRow(plotOutput("regular_graph")),                 p(i18n$t("Square: Innovator")), 
+                 p(i18n$t("Circle: Non-innovator")), 
+                 p(i18n$t("Orange: Learner")), 
+                 p(i18n$t("Blue: Non-learner"))),
         tabPanel(title = i18n$t("Random Network"),
-                 fluidRow(plotOutput("random_graph"))),
+                 h4(i18n$t("Initial Graph")),
+                 fluidRow(plotOutput("random_graph")),
+                 p(i18n$t("Square: Innovator")), 
+                 p(i18n$t("Circle: Non-innovator")), 
+                 p(i18n$t("Orange: Learner")), 
+                 p(i18n$t("Blue: Non-learner"))),
         tabPanel(title = i18n$t("Small-world"),
+                 h4(i18n$t("Initial Graph")),
                  fluidRow(plotOutput(
                    "small_world_graph"
-                 ))),
+                 )),
+                 p(i18n$t("Square: Innovator")), 
+                 p(i18n$t("Circle: Non-innovator")), 
+                 p(i18n$t("Orange: Learner")), 
+                 p(i18n$t("Blue: Non-learner"))
+                 ),
         tabPanel(title = i18n$t("Scale-free"),
-                 fluidRow(plotOutput("scale_free_graph")))
+                 h4(i18n$t("Initial Graph")),
+                 fluidRow(plotOutput("scale_free_graph")),
+                 p(i18n$t("Square: Innovator")), 
+                 p(i18n$t("Circle: Non-innovator")), 
+                 p(i18n$t("Orange: Learner")), 
+                 p(i18n$t("Blue: Non-learner"))
+                 )
       )
     )
   )

@@ -105,7 +105,13 @@ shinyServer(function(input, output, session) {
       
       regular$layout <- layout.fruchterman.reingold
       
-      V(regular)$color = V(regular)$state + 1
+      regular$layout <- layout.fruchterman.reingold
+      V(regular)$color = V(regular)$age + 1 
+      
+      #color 
+      V(regular)[V(regular)$state==-1]$shape <- "square"
+      V(regular)[V(regular)$state==1]$shape <- "circle"
+      
       output$regular_graph <-
         renderPlot(
           plot(
@@ -195,7 +201,14 @@ shinyServer(function(input, output, session) {
         )
       
       random$layout <- layout.fruchterman.reingold
-      V(random)$color = V(random)$state + 1
+      V(random)$color = V(random)$age + 1 
+      V(random)[V(random)$age>2]$color <- "1"
+      V(random)[V(random)$age<=2]$color <- "5"
+      
+      #color 
+      V(random)[V(random)$state==-1]$shape <- "square"
+      V(random)[V(random)$state==1]$shape <- "circle"
+      
       output$random_graph <-
         renderPlot(
           plot(
@@ -285,7 +298,12 @@ shinyServer(function(input, output, session) {
         )
       
       small_world$layout <- layout.fruchterman.reingold
-      V(small_world)$color = V(small_world)$state + 1
+      V(small_world)$color = V(small_world)$age + 1 
+      
+      #color 
+      V(small_world)[V(small_world)$state==-1]$shape <- "square"
+      V(small_world)[V(small_world)$state==1]$shape <- "circle"
+      
       output$small_world_graph <-
         renderPlot(
           plot(
@@ -387,7 +405,12 @@ shinyServer(function(input, output, session) {
         )
       
       scale_free$layout <- layout.fruchterman.reingold
-      V(scale_free)$color = V(scale_free)$state + 1
+      V(scale_free)$color = V(scale_free)$age + 1 
+      
+      #color 
+      V(scale_free)[V(scale_free)$state==-1]$shape <- "square"
+      V(scale_free)[V(scale_free)$state==1]$shape <- "circle"
+      
       output$scale_free_graph <-
         renderPlot(
           plot(

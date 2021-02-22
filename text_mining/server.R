@@ -11,7 +11,6 @@ options(warn = -1)
 
 library(googledrive)
 
-
 library(plyr)
 library(data.table)
 library(tidyverse)
@@ -141,7 +140,7 @@ extract.positions.categories <-
     return(my.limits)
   }
 
-# Define server logic required to draw a histogram
+# Define server logic 
 shinyServer(function(input, output, session) {
   observeEvent(input$selected_language, {
     update_lang(session, input$selected_language)
@@ -167,6 +166,7 @@ shinyServer(function(input, output, session) {
         summary(content$class_2)
       })
       
+      #input for third tab (categories and terms)
       output$categores_1_choices = renderUI({
         selectInput(
           'categories.1',
@@ -177,6 +177,7 @@ shinyServer(function(input, output, session) {
         )
       })
       
+      #Output for tenth tab (Dispersion of terms)
       output$categores_1_choices_dis = renderUI({
         selectInput(
           'categories.1_dis',
@@ -186,7 +187,6 @@ shinyServer(function(input, output, session) {
           selected = unique(content$class_1)
         )
       })
-      
       
       output$categores_2_choices_dis = renderUI({
         selectInput(
@@ -198,6 +198,7 @@ shinyServer(function(input, output, session) {
         )
       })
       
+      #Output for eleventh tab (Topic modelling) 
       output$categores_1_choices_tm = renderUI({
         selectInput(
           'categories.1_dis',
@@ -217,16 +218,24 @@ shinyServer(function(input, output, session) {
         )
       })
       
-      
+      #Tab three outputs 
       output$analysis3 <- renderPrint({
+        categories.2 <- "all"
+        selected.content <-
+          select.subset(content(), input$categories.1, categories.2,input$upos.category, input$my.stop.words) # Selecting a subset of data
         print(selected.content %>% filter(upos == "X") %>% pull(token))
       })
       
       output$analysis4 <- renderPrint(({
+        categories.2 <- "all"
+        selected.content <-
+          select.subset(content(), input$categories.1, categories.2,input$upos.category, input$my.stop.words) # Selecting a subset of data
+        
         print(selected.content %>% filter(upos == "X") %>% pull(sentence) %>% unique())
       }))
       
       #pospart
+      #Tab four input (Part-Of-Speech Distribution)
       output$categores_1_choices_pos = renderUI({
         selectInput(
           'categories.1.pos',
@@ -246,6 +255,7 @@ shinyServer(function(input, output, session) {
         )
       })
       
+      #Tab four output (Part-Of-Speech Distribution)
       output$pos1 <- renderPlot({
         categories.2 <- "all"
         selected.content <-
@@ -333,7 +343,7 @@ shinyServer(function(input, output, session) {
           )
       })
       
-      # richness
+      #Fifth tab output (Measures of lexical richness) 
       output$richness <- renderPlot({
         print("button3")
         categories.2 <- "all"
@@ -358,7 +368,7 @@ shinyServer(function(input, output, session) {
                    coord_flip() + theme_grey(base_size = 14) + ggtitle(paste0("TTR for ", paste(input$upos.category_richness, collapse=", "))))
       })
       
-      #frequency 
+      #Sixth tab output (Frequency of occurrence)  
       output$categores_1_choices_frequency = renderUI({
         selectInput(
           'categories.1.frequency',
@@ -395,8 +405,7 @@ shinyServer(function(input, output, session) {
         })
       
       
-      #collocation 
-      #
+      #Seventh tab output (Collocations)
       output$categores_1_choices_collocation = renderUI({
       selectInput(
         'categores_1_choices.collocation',
@@ -408,7 +417,7 @@ shinyServer(function(input, output, session) {
     })
       
       output$collocations1 <- renderPlot({
-        
+        categories.2 <- "all"
         selected.content <- select.subset(content, input$categores_1_choices.collocation, categories.2, input$upos.category_collocation, input$my.stop.words_collocation) # Selecting a subset of data
         
         # We first call the function keywords_collocation which extract collocations 
@@ -426,6 +435,7 @@ shinyServer(function(input, output, session) {
       })
       
       output$collocations2 <- renderPlot({
+        categories.2 <- "all"
         selected.content <- select.subset(content, input$categores_1_choices.collocation, categories.2, input$upos.category_collocation, input$my.stop.words_collocation) # Selecting a subset of data
         my.collocations <- keywords_collocation(selected.content, term = "lemma", group = "class_1", ngram_max = input$nb.gram)
         my.collocations <- my.collocations[order(-my.collocations$lfmd),] # we sort the collocations in decreasing order according to LFMD
@@ -444,7 +454,7 @@ shinyServer(function(input, output, session) {
         )
       })
       
-      ### Co-occurence 
+      #Eighth tab output (Co-occurrence)
       output$categores_1_choices_cooccurrence = renderUI({
         selectInput(
           'categores_1_choices.cooccurence',
@@ -485,7 +495,7 @@ shinyServer(function(input, output, session) {
         return(g)
       })
       
-      # sentiment 
+      #Nineth tab output (Sentiment Analysis)
       output$categores_1_choices_sentiment <- renderUI({
         selectInput(
           'categores_1_choices.sentiment',
@@ -1005,15 +1015,16 @@ shinyServer(function(input, output, session) {
   analysis <- eventReactive(input$goButton1, {
     categories.2 <- "all"
     selected.content <-
-      select.subset(content(), input$categories.1, categories.2) # Selecting a subset of data
+      select.subset(content(), input$categories.1, categories.2,input$upos.category, input$my.stop.words) # Selecting a subset of data
     analysis <-
       selected.content %>% filter(upos == input$upos.category) %>% pull(input$see.as) %>% unique()
     return(analysis)
   })
   
   analysis2 <- eventReactive(input$goButton2, {
+    categories.2 <- "all"
     selected.content <-
-      select.subset(content(), input$categories.1, categories.2) # Selecting a subset of data
+      select.subset(content(), input$categories.1, categories.2,input$upos.category, input$my.stop.words) # Selecting a subset of data
     analysis2 <-
       selected.content %>% filter(get(input$target.term) == input$checked.term) %>% pull(sentence)
     return(analysis2)

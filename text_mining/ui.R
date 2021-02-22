@@ -43,12 +43,13 @@ ui <- fluidPage(
       )),
   
   titlePanel(i18n$t("Book Analysis")),
-  
+  #the main panel 
   mainPanel(
     tabsetPanel(
       id = "inTabset",
       ### Tab 1 #######
       tabPanel(
+        #First tab showing the corpus 
         value = "panel1",
         title = i18n$t("Corpus"),
         ##show corpus
@@ -92,6 +93,8 @@ ui <- fluidPage(
         h4(i18n$t("Display the first 20 rows")),
         tableOutput("content")
         ),
+      
+      #Second tab showing the two levels of classifications 
       tabPanel(
         value = "panel2",
         title = i18n$t("Two levels of classification"),
@@ -117,6 +120,8 @@ ui <- fluidPage(
         h5("2nd Level"),
         verbatimTextOutput("class_2") # Each document is associated with a number of text tokens (words, but also punctation marks)
         ),
+      
+      #Third tab showing the categories and terms  
       tabPanel(
         value = "panel3",
         title = i18n$t("Categories/ Terms"),
@@ -228,6 +233,7 @@ ui <- fluidPage(
         selectizeInput(
           "upos.category",
           "Upos Category",
+          multiple = TRUE, 
           choices = c(
             "PROPN",
             "NOUN",
@@ -271,6 +277,8 @@ ui <- fluidPage(
         verbatimTextOutput("analysis4")
 
       ),
+      
+      #Forth tab showing the part-of-speech distribution  
       tabPanel(
         value = "panel4",
         title = i18n$t("Part-Of-Speech Distribution"),
@@ -284,6 +292,8 @@ ui <- fluidPage(
         textOutput("other.pct"),
         br()
       ),
+      
+      #Fifth tab showing the Measures of lexical richness 
       tabPanel(
         value = "panel5",
         title = i18n$t("Measures of lexical richness"),
@@ -293,6 +303,7 @@ ui <- fluidPage(
         selectizeInput(
           "upos.category_richness",
           "Select the upos categories to investigate",
+          multiple = TRUE, 
           choices = c(
             "PROPN",
             "NOUN",
@@ -329,6 +340,8 @@ ui <- fluidPage(
         plotOutput("richness")
         
       ),
+      
+      #Sixth tab showing Frequency of occurrence
       tabPanel(
         value = "panel6",
         title = i18n$t("Frequency of occurrence"),
@@ -338,6 +351,7 @@ ui <- fluidPage(
         selectizeInput(
           "upos.category_frequency",
           "Select the upos categories to investigate",
+          multiple = TRUE, 
           choices = c(
             "PROPN",
             "NOUN",
@@ -473,6 +487,8 @@ ui <- fluidPage(
         actionButton("goButton3", i18n$t("Show/ Refresh Word Cloud")),
         wordcloud2Output("frequency3")
       ),
+      
+      #Seventh tab showing Collocations
       tabPanel(
         value = "panel7",
         title = i18n$t("Collocations"),
@@ -483,6 +499,7 @@ ui <- fluidPage(
         selectizeInput(
           "upos.category_collocation",
           "Select the upos categories to investigate",
+          multiple = TRUE, 
           choices = c(
             "PROPN",
             "NOUN",
@@ -620,6 +637,8 @@ ui <- fluidPage(
         h5("We can also prepare a network graph with the strongest collocations"),
         plotOutput("collocations2")
       ),
+      
+      #Eighth tab showing Co-occurrence
       tabPanel(
         value = "panel8",
         title = i18n$t("Co-occurrence"),
@@ -630,6 +649,7 @@ ui <- fluidPage(
         selectizeInput(
           "upos.category_cooccurrence",
           "Select the upos categories to investigate",
+          multiple = TRUE, 
           choices = c(
             "PROPN",
             "NOUN",
@@ -757,6 +777,8 @@ ui <- fluidPage(
         h5("A network graph with the most frequent cooccurrences"),
         plotOutput("cooccurrence1")
       ),
+      
+      #Nineth tab showing Sentiment Analysis
       tabPanel(
         value = "panel9",
         title = i18n$t("Sentiment Analysis"),
@@ -822,8 +844,10 @@ ui <- fluidPage(
         p("Display specific sentiments"), 
         plotOutput("sentiment12")
       ),
+      
+      #Tenth tab showing Dispersion of terms
       tabPanel(
-        value = "panel8",
+        value = "panel10",
         title = i18n$t("Dispersion of terms"), 
         h4("Only makes sense if your categories are ordered"),
         h4("Selecting a subset of text to perform the analysis"),
@@ -835,6 +859,7 @@ ui <- fluidPage(
         selectizeInput(
           "upos.categories_dis",
           "Select the upos categories to investigate",
+          multiple = TRUE, 
           choices = c(
             "PROPN",
             "NOUN",
@@ -891,6 +916,8 @@ ui <- fluidPage(
         
         
       ),
+      
+      #Eleventh tab showing Topic modelling
       tabPanel(
         value = "panel11",
         title = i18n$t("Topic modelling"), 

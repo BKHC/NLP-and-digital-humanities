@@ -240,7 +240,7 @@ server <- function(input, output, session) {
     if (is.null(results()))
       return (NULL)
     p <- ggplot(data=results(), aes(x=time, y=success)) + geom_line() + ylim(0,1) + geom_smooth(method = loess)
-    p <- p + xlab(i18n$t("Time")) + ylab(i18n$t("Success")) + ggtitle(i18n$t("Evolution of success"))
+    p <- p + xlab("Time") + ylab("Success") + ggtitle("Evolution of success")
     p <- p + theme(text = element_text(size=15, family="serif"))
     p
     
@@ -250,7 +250,7 @@ server <- function(input, output, session) {
     if (is.null(results()))
       return (NULL)
     p <- ggplot(data=results(), aes(x=time, y=av_score_best_words)) + geom_line() + ylim(0,1) + geom_smooth(method = loess)
-    p <- p + xlab(i18n$t("Time")) + ylab(i18n$t("Average score of the best words across concepts")) + ggtitle(i18n$t("Evolution of the scores of the best words"))
+    p <- p + xlab("Time") + ylab("Average score of the best words across concepts") + ggtitle("Evolution of the scores of the best words")
     p <- p + theme(text = element_text(size=15, family="serif"))
     p
   })

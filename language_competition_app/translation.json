@@ -15,7 +15,7 @@
             "fr": "Exécuter pour visualiser (si plus que le nombre réel d'exécutions, vous montrer la dernière exécution)",
             "cn": "运行以可视化（如果超过实际运行次数，请显示最后一次运行）"
         },
-        {"en": "Parameters", "fr": "Paramètres", "cn": "参量"},
+        {"en": "Parameters", "fr": "Paramètres", "cn": "常规网络"},
         {"en": "Simulation", "fr": "Simulation", "cn": "模拟"},
         {"en": "Time limit", "fr": "Limite de temps", "cn": "时限"},
         {"en": "Type of network", "fr": "Type de réseau", "cn": "网络类型"},
